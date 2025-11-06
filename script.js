@@ -21,8 +21,8 @@
     });
   }, { threshold: 0.15 });
 
-  // Observe all animated elements (including glow-text)
-  document.querySelectorAll('.glow-text, .project, .contact-section, .site-footer')
+  // Observe all animated elements
+  document.querySelectorAll('.glow-text, .project, .contact-section, .site-footer, .hero-right')
     .forEach(el => observer.observe(el));
 
   // Button hover ripple
@@ -42,3 +42,4 @@
       .forEach(el => el.classList.add('show'));
   });
 })();
+
