@@ -1,45 +1,44 @@
 (function () {
   // Auto year update
-  const yearEl = document.getElementById('year');
+  const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const target = document.querySelector(a.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-  });
-
   // Scroll reveal observer
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
 
   // Observe all animated elements
-  document.querySelectorAll('.glow-text, .project, .contact-section, .site-footer, .hero-right')
-    .forEach(el => observer.observe(el));
+  document
+    .querySelectorAll(
+      ".glow-text, .project, .contact-section, .site-footer, .hero-right"
+    )
+    .forEach((el) => observer.observe(el));
 
   // Button hover ripple
-  document.querySelectorAll('.btn').forEach(btn => {
-    btn.addEventListener('mousemove', e => {
+  document.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("mousemove", (e) => {
       const rect = btn.getBoundingClientRect();
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      btn.style.setProperty('--x', `${x}px`);
-      btn.style.setProperty('--y', `${y}px`);
+      btn.style.setProperty("--x", `${x}px`);
+      btn.style.setProperty("--y", `${y}px`);
     });
   });
 
   // Fade-in hero on load
-  window.addEventListener('load', () => {
-    document.querySelectorAll('.hero-left, .profile-card')
-      .forEach(el => el.classList.add('show'));
+  window.addEventListener("load", () => {
+    document
+      .querySelectorAll(".hero-left, .profile-card")
+      .forEach((el) => el.classList.add("show"));
   });
 })();
-
+      
