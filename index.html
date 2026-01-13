@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="favicon.png" type="image/png">
 </head>
+
 <body>
   <header class="site-header">
     <div class="container header-inner">
@@ -26,35 +28,46 @@
   </header>
 
   <main class="container main">
-    <section class="hero">
+    <section class="hero" aria-label="Introduction">
       <div class="hero-left">
-        <h2 class="glow-text">Hello — I am Amit</h2>
+        <h2 class="glow-text">
+          Frontend Web Developer | HTML • CSS • JavaScript
+        </h2>
 
         <p class="intro">
-          Hello, my name is <strong>Amit Yadav</strong> and I am a web developer. I am passionate about web development and love learning by creating new projects.
-          Currently, I am pursuing BSc.IT and working with HTML, CSS, and JavaScript. My goal is to create clean, fast, and user-friendly web experiences.
+          I build responsive, fast, and user-friendly web applications.
+          Currently pursuing <strong>BSc.IT</strong> and actively looking for
+          <strong>internship / junior frontend developer roles</strong>.
         </p>
 
         <div class="skills">
           <h3 class="glow-text">Skills</h3>
           <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Responsive Design</li>
+            <li>HTML5 (Semantic, SEO-friendly)</li>
+            <li>CSS3 (Flexbox, Grid)</li>
+            <li>JavaScript (DOM, ES6)</li>
+            <li>Responsive Web Design</li>
+            <li>Git & GitHub</li>
           </ul>
+
         </div>
 
         <div class="cta-row">
           <a class="btn" href="#projects">Projects</a>
-          <a class="btn outline" href="ay583991_resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a class="btn outline" href="ay583991_resume.pdf" target="_blank">
+            Download Resume
+          </a>
+
         </div>
 
         <div class="socials">
-          <a href="https://www.instagram.com/yadav_.0789" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.instagram.com/yadav._.0024" target="_blank" rel="noopener">Instagram</a>
           <a href="mailto:ay583991@gmail.com">Email</a>
-          <a href="#" class="disabled">GitHub</a>
-          <a href="#" class="disabled">YouTube</a>
+          <a href="https://github.com/ay583991-sketch" target="_blank" rel="noopener">
+            GitHub
+          </a>
+          <span class="disabled">YouTube (Coming Soon)</span>
+
         </div>
       </div>
 
@@ -71,35 +84,54 @@
       </div>
     </section>
 
-    <section id="projects" class="projects">
-      <h2 class="glow-text">Projects</h2>
+    <section id="projects" class="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="glow-text">Projects</h2>
+
       <p class="muted">Some small projects — more coming soon.</p>
 
       <div class="grid">
         <article class="project">
-          <h4>Simple Portfolio</h4>
-          <p>A simple responsive portfolio site — HTML/CSS/JS.</p>
-          <div class="tags"><span>HTML</span><span>CSS</span></div>
+          <h4>Resume Generator Web App</h4>
+
+          <p>
+            A resume builder that allows users to enter details
+            and instantly preview a clean, printable resume layout.
+          </p>
+
+          <ul class="project-points">
+            <li>Live preview using JavaScript DOM</li>
+            <li>Fully responsive layout</li>
+            <li>Clean and reusable CSS structure</li>
+          </ul>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn outline" href="https://ay583991-sketch.github.io/resume-generate/" target="_blank">Live
+              Demo</a>
+            <a class="btn outline" href="https://github.com/ay583991-sketch/resume-generate" target="_blank">Source
+              Code</a>
+          </div>
         </article>
 
-        <article class="project">
-          <h4>ToDo App</h4>
-          <p>A small JavaScript ToDo application.</p>
-          <div class="tags"><span>JavaScript</span></div>
-        </article>
 
-        <article class="project">
-          <h4>Responsive Blog Layout</h4>
-          <p>Mobile-first blog layout.</p>
-          <div class="tags"><span>CSS</span><span>Responsive</span></div>
-        </article>
       </div>
     </section>
 
     <section class="contact-section">
       <h2 class="glow-text">Contact</h2>
       <p class="muted">To contact me directly, send an email below:</p>
-      <a class="btn large" href="mailto:ay583991@gmail.com">Email me</a>
+      <a class="btn large" href="mailto:ay583991@gmail.com">
+        Hire Me / Contact Me
+      </a>
+
+      <p class="muted">
+        Open for internships & junior frontend developer roles
+      </p>
     </section>
   </main>
 
@@ -111,4 +143,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
